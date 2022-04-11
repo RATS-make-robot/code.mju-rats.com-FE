@@ -39,3 +39,4 @@
 ```
 
 # 사용법
+`docker run -d -p 3000:3000 "code.mju-rats.com-fe"`
