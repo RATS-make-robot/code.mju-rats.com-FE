@@ -1,15 +1,14 @@
-FROM node:12
-
-WORKDIR /code.mju-rats.com-FE
-
-
+#build stage
+FROM node:14.7.0-alpine3.10 as build-stage
+WORKDIR /app
 COPY package*.json ./
-COPY yarn.lock ./
-
-COPY . .
-RUN rm -rf node_modules
+#CMD ["npm", "install"]
 RUN npm install
+COPY . .
+RUN npm run build
 
+#production
+FROM nginx:1.19.1-alpine as production-stage
+COPY --from=build-stage /app/dist /usr/share/nginx/html
 EXPOSE 3000
-
-CMD ["npm", "run", "dev"]
+CMD [ "nginx", "-g", "daemon off;" ]
