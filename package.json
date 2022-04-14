@@ -10,7 +10,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "zip": "node build/zip.js",
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview-vite": "vite preview"
   },
