@@ -1,6 +1,6 @@
 <template>
   <div class="home-wrap">
-    <div class="news">NewsList</div>
+    <div class="news">RATS 공지사항</div>
     <Card v-for="(item, index) in list" :key="item.nid">
       <Row type="flex" align="middle">
         <Col :span="2">
@@ -66,11 +66,11 @@ export default {
     },
     del (nid) {
       this.$Modal.confirm({
-        title: '提示',
-        content: '<p>此操作将永久删除该消息, 是否继续?</p>',
+        title: '알림',
+        content: '<p>메시지를 삭제하시겠습니까?</p>',
         onOk: () => {
           this.$store.dispatch('news/delete', { nid }).then(() => {
-            this.$Message.success(`成功删除 ${nid}！`)
+            this.$Message.success(`삭제 완료 ${nid}！`)
             this.$router.push({
               name: 'home',
               query: { page: this.page }
@@ -78,7 +78,7 @@ export default {
           })
         },
         onCancel: () => {
-          this.$Message.info('已取消删除！')
+          this.$Message.info('삭제 취소！')
         }
       })
     }

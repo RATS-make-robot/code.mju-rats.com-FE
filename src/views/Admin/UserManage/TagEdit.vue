@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>管理标签组</h1>
+    <h1>태그 관리</h1>
     <Row type="flex" justify="start">
       <Col :span="2" class="label">Tag</Col>
       <Col :span="4">

@@ -100,8 +100,8 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://code.mju-rats.com-be:8888',
-        //target: 'http://localhost:8888',
+        //target: 'http://code.mju-rats.com-be:8888',
+        target: 'http://localhost:8888',
         changeOrigin: true
       }
     }

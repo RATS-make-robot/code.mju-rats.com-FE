@@ -127,22 +127,22 @@ export default {
         this.targetKeys = []
       } else if (name === 'delete') {
         if (!this.group || !this.group.gid) {
-          this.$Message.info('未选择要删除的Group!')
+          this.$Message.info('삭제할 그룹을 선택해주세요!')
         } else {
           this.$Modal.confirm({
-            title: '提示',
-            content: `<p>此操作将永久删除Group--${this.group.title}, 是否继续?</p>`,
+            title: '알림',
+            content: `<p>Group--${this.group.title}, 삭제하시겠습니까?</p>`,
             onOk: () => {
               this.$Spin.showLoading()
               this.$store.dispatch('group/delete', { gid: this.group.gid }).then(() => {
                 this.$Spin.hide()
-                this.$Message.success(`成功删除 ${this.group.title}！`)
+                this.$Message.success(`삭제 완료, ${this.group.title}！`)
               }).catch(() => {
                 this.$Spin.hide()
               })
             },
             onCancel: () => {
-              this.$Message.info('已取消删除！')
+              this.$Message.info('삭제 취소 !')
             }
           })
         }
@@ -158,7 +158,7 @@ export default {
         this.$Spin.showLoading()
         this.$store.dispatch('group/update', group).then(() => {
           this.$Spin.hide()
-          this.$Message.success('更新当前用户组成功！')
+          this.$Message.success('수정 완료！')
         }).catch(() => {
           this.$Spin.hide()
         })
@@ -167,7 +167,7 @@ export default {
         this.$store.dispatch('group/create', group).then(() => {
           this.$store.dispatch('group/find')
           this.$Spin.hide()
-          this.$Message.success('新建当前用户组成功！')
+          this.$Message.success('사용자 생성 완료 !')
         }).catch(() => {
           this.$Spin.hide()
         })

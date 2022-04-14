@@ -11,7 +11,7 @@
       <Col :span="8">
         <DatePicker
           type="datetime"
-          placeholder="选择日期时间"
+          placeholder="날짜/시간 선택"
           @on-change="(time) => changeTime('start', time)">
         </DatePicker>
       </Col>
@@ -21,7 +21,7 @@
       <Col :span="8">
         <DatePicker
           type="datetime"
-          placeholder="选择日期时间"
+          placeholder="날짜/시간 선택"
           @on-change="(time) => changeTime('end', time)">
         </DatePicker>
       </Col>
@@ -29,7 +29,7 @@
     <Row type="flex" justify="start">
       <Col :span="2" class="label">Type</Col>
       <Col :span="4">
-        <Select v-model="contest.encrypt" placeholder="请选择">
+        <Select v-model="contest.encrypt" placeholder="선택">
           <Option
             v-for="item in options"
             :key="item.value"
@@ -181,7 +181,7 @@ export default {
       const user = this.targetKeys.map((item) => this.userList[+item])
       const res = user.join('\r\n')
       this.contest.argument = res
-      this.$Message.success('保存当前用户组成功！')
+      this.$Message.success('현재 사용자 그룹을 저장하는 데 성공했습니다!')
     },
     changeTime (name, time) {
       if (name === 'start') {

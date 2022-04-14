@@ -3,7 +3,7 @@
     <i-switch size="large" @on-change="change">
       <Icon type="android-done" slot="open"></Icon>
       <Icon type="android-close" slot="close"></Icon>
-    </i-switch> 自动刷新 (每 10 秒一次)
+    </i-switch> 자동 새로고침 (10초)
     <div class="conrank-wrap">
       <table>
         <tr>
@@ -64,7 +64,7 @@ export default {
         this.timer = setInterval(() => {
           this.getRank()
           this.$Message.info({
-            content: '刷新成功',
+            content: '업데이트 성공 !',
             duration: 1
           })
         }, 10000)

@@ -25,17 +25,17 @@ const instance = {}
         console.log(err)
         if (err.response && err.response.status >= 500) {
           Vue.prototype.$Message.error({
-            content: `Σ(;ﾟдﾟ)  服务器崩坏，需要联系管理员维修`,
+            content: `Σ(;ﾟдﾟ) 헉, 서버 다운...!`,
             duration: 6.5
           })
         } else if (err.response && err.response.status === 403) {
           Vue.prototype.$Message.error({
-            content: `╮(╯_╰)╭ 你没有相关权限进行此操作`,
+            content: `╮(╯_╰)╭ 권한이 없어요 ~`,
             duration: 6.5
           })
         } else if (err.response && err.response.status === 401) {
           Vue.prototype.$Message.error({
-            content: `(〃∀〃) 请先登录`,
+            content: `(〃∀〃) 로그인 먼저 해주세요 !`,
             duration: 6.5
           })
         } else if (err.response && err.response.status >= 400 && err.response.status < 500) {
@@ -45,7 +45,7 @@ const instance = {}
           })
         } else if (!err.response) {
           Vue.prototype.$Message.error({
-            content: `_(:з」∠)_  网络异常，检查你的网线`,
+            content: `_(:з」∠)_  네트워크를 다시 확인해주세요.`,
             duration: 6.5
           })
         } else {

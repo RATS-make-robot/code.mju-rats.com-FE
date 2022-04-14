@@ -172,15 +172,15 @@ export default {
     },
     del (cid) {
       this.$Modal.confirm({
-        title: '提示',
-        content: '<p>此操作将永久删除该文件, 是否继续?</p>',
+        title: '알림',
+        content: '<p>대회를 삭제하겠습니까?</p>',
         onOk: () => {
           this.$store.dispatch('contest/delete', { cid }).then(() => {
-            this.$Message.success(`成功删除 ${cid}！`)
+            this.$Message.success(`삭제 완료, ${cid}！`)
           })
         },
         onCancel: () => {
-          this.$Message.info('已取消删除！')
+          this.$Message.info('삭제 취소！')
         }
       })
     }

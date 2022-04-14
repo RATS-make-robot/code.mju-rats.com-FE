@@ -60,25 +60,25 @@ export default {
     },
     del (item) {
       this.$Modal.confirm({
-        title: '提示',
-        content: '<p>此操作将永久删除该文件, 是否继续?</p>',
+        title: '알림',
+        content: '<p>파일을 삭제하사겠습니까?</p>',
         onOk: () => {
           const testcase = {
             pid: this.$route.params.pid,
             uuid: item.uuid
           }
           this.$store.dispatch('testcase/delete', testcase).then(() => {
-            this.$Message.success(`成功删除${item.uuid}！`)
+            this.$Message.success(`삭제 완료, ${item.uuid}！`)
           })
         },
         onCancel: () => {
-          this.$Message.info('已取消删除！')
+          this.$Message.info('삭제 취소 !')
         }
       })
     },
     create () {
       this.$store.dispatch('testcase/create', this.test).then(() => {
-        this.$Message.success(`成功创建！`)
+        this.$Message.success(`생성 완료 !`)
         this.fetch()
         this.test.in = ''
         this.test.out = ''

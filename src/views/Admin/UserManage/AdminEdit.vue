@@ -33,9 +33,9 @@
       </template>
     </table>
     <Card dis-hover>
-        <p>Admin 为最高权限，具有所有权限。</p>
-        <p>Teacher 具有除删除外的所有权限。</p>
-        <p>一般，被添加的用户通过刷新网页或重新登录即可查看新权限。</p>
+        <p>Admin 모든 권한을 가지고 있습니다.</p>
+        <p>Teacher 삭제를 제외하고 모든 권한을 가지고 있습니다.</p>
+        <p>일반적으로 추가된 사용자는 웹 페이지를 새로 고치거나 다시 로그인하면 새로운 권한을 볼 수 있습니다.</p>
     </Card>
   </div>
 </template>
@@ -71,7 +71,7 @@ export default {
     update (user) {
       const payload = only(user, 'uid privilege')
       this.$store.dispatch('user/update', payload).then(() => {
-        this.$Message.success(`成功更新 ${payload.uid} 用户！`)
+        this.$Message.success(`유저, ${payload.uid} 갱신(?) 완료！`)
         this.fetchAdmin()
         this.admin = ''
       })
@@ -85,7 +85,7 @@ export default {
         privilege: this.privilege.Teacher
       }
       this.$store.dispatch('user/update', user).then(() => {
-        this.$Message.success(`成功设置 ${this.admin} 用户为管理员！`)
+        this.$Message.success(`유저, ${this.admin} 관리자 수정 완료！`)
         this.fetchAdmin()
         this.admin = ''
       })
@@ -96,16 +96,16 @@ export default {
         { privilege: this.privilege.PrimaryUser }
       )
       this.$Modal.confirm({
-        title: '提示',
-        content: `<p>此操作将删除${user.uid}用户的管理员权限, 是否继续?</p>`,
+        title: '알림',
+        content: `<p>유저, ${user.uid}用户的管理员权限, 是否继续?</p>`,
         onOk: () => {
           this.$store.dispatch('user/update', user).then(() => {
-            this.$Message.success(`成功设置${user.uid}用户为普通用户！`)
+            this.$Message.success(`유저, ${user.uid} 수정 완료 !`)
             this.fetchAdmin()
           })
         },
         onCancel: () => {
-          this.$Message.info('已取消删除！')
+          this.$Message.info('수정 취소 !')
         }
       })
     }

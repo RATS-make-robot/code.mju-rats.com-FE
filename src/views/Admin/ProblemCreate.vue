@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>出题的基本步骤</h1>
+    <h1>문제 출제의 기본 단계</h1>
     <br>
     <Steps :current="5" :style="{ color: 'black'}">
       <Step title="算法设计" content="思考该题希望解答者使用的算法类型" status="process"></Step>

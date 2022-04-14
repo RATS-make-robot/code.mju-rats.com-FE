@@ -92,15 +92,15 @@ export default {
     },
     del (did) {
       this.$Modal.confirm({
-        title: '提示',
-        content: '<p>此操作将永久删除该文件, 是否继续?</p>',
+        title: '알림',
+        content: '<p>파일을 삭제하시겠습니까?</p>',
         onOk: () => {
           this.$store.dispatch('discuss/delete', { did }).then(() => {
-            this.$Message.success(`成功删除 ${did}！`)
+            this.$Message.success(`삭제 완료, ${did}！`)
           })
         },
         onCancel: () => {
-          this.$Message.info('已取消删除！')
+          this.$Message.info('삭제 취소 !')
         }
       })
     }
