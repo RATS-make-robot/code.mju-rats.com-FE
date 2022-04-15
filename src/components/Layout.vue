@@ -55,7 +55,7 @@
       </Content>
      <Footer class="layout-footer-center">
        <p>Server Time: {{ currentTime | timePretty }}</p>
-       <strong>RATS OJ</strong> by <a href="https://github.com/BEMELON" target="_blank">BEMELON <Icon type="social-github"></Icon>.</a> <br>
+       <strong>RATS OJ</strong> by <a href="https://github.com/BEMELON" target="_blank">BEMELON</a> <Icon type="social-github"></Icon>,  <a href="https://github.com/js4ngu" target="_blank">js4ngu <Icon type="social-github"></Icon></a> <br>
        <strong>Putong OJ</strong> by <a href="https://github.com/acm309" target="_blank">acm309 <Icon type="social-github"></Icon>.</a> <br>
        The source code is licensed <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
      </Footer>

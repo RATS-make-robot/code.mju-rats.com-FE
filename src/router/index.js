@@ -4,7 +4,9 @@ import routes from './routes'
 import store from '../store'
 import { sync } from 'vuex-router-sync'
 import { LoadingBar } from 'iview'
-
+import iView from 'iview';
+import locale from 'iview/dist/locale/en-US';
+Vue.use(iView, {locale: locale});
 Vue.use(Router)
 
 const router = new Router({
