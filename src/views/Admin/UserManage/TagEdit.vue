@@ -159,7 +159,7 @@ export default {
         this.$Spin.showLoading()
         this.$store.dispatch('tag/update', tag).then(() => {
           this.$Spin.hide()
-          this.$Message.success('更新The current tag group update was successful!')
+          this.$Message.success('The current tag group update was successful!')
         }).catch(() => {
           this.$Spin.hide()
         })

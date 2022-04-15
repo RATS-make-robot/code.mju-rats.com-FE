@@ -12,7 +12,7 @@
       <Col :span="6">
         <Col :span="6"><label>Judge</label></Col>
         <Col :span="16">
-          <Select v-model="judge" placeholder="请Please select">
+          <Select v-model="judge" placeholder="Please select">
             <Option
               v-for="item in judgeList"
               :key="item.value"
