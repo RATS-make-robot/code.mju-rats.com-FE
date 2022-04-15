@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>增删管理员</h1>
+    <h1>Add and Delete Administrator</h1>
     <Row type="flex" justify="start">
       <Col :span="2" class="label">Username</Col>
       <Col :span="4">
@@ -97,7 +97,7 @@ export default {
       )
       this.$Modal.confirm({
         title: '알림',
-        content: `<p>유저, ${user.uid}用户的管理员权限, 是否继续?</p>`,
+        content: `<p>유저, ${user.uid}user's administrator privileges, continue?</p>`,
         onOk: () => {
           this.$store.dispatch('user/update', user).then(() => {
             this.$Message.success(`유저, ${user.uid} 수정 완료 !`)

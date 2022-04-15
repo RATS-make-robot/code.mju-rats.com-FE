@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>管理用户组</h1>
+    <h1>Managing user groups</h1>
     <Row type="flex" justify="start">
       <Col :span="2" class="label">Group</Col>
       <Col :span="4">

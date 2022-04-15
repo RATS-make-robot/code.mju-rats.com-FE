@@ -159,7 +159,7 @@ export default {
         this.$Spin.showLoading()
         this.$store.dispatch('tag/update', tag).then(() => {
           this.$Spin.hide()
-          this.$Message.success('更新当前标签组成功！')
+          this.$Message.success('The current tag group update was successful!')
         }).catch(() => {
           this.$Spin.hide()
         })
@@ -168,7 +168,7 @@ export default {
         this.$store.dispatch('tag/create', tag).then(() => {
           this.$store.dispatch('tag/find')
           this.$Spin.hide()
-          this.$Message.success('新建当前标签组成功！')
+          this.$Message.success('Successfully created new tag group!')
         }).catch(() => {
           this.$Spin.hide()
         })
