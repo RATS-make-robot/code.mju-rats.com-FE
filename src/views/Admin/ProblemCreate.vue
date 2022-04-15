@@ -3,11 +3,11 @@
     <h1>문제 출제의 기본 단계</h1>
     <br>
     <Steps :current="5" :style="{ color: 'black'}">
-      <Step title="算法设计" content="思考该题希望解答者使用的算法类型" status="process"></Step>
-      <Step title="题面设计" content="在算法基础上增加适当背景描述" status="process"></Step>
-      <Step title="输入输出格式" content="一般情况下应该使输入输出保持简单" status="process"></Step>
-      <Step title="测试数据编写" content="尽可能多出一点数据，这些数据建议自己写代码生成" status="process"></Step>
-      <Step title="测试题目" content="务必自己写代码测试题目能不能通过！！！必要时也要让其它人测试题目" icon="ios-star" status="process"></Step>
+      <Step title="Algorithmic design" content="Think about the type of algorithm that the problem solver wants to use." status="process"></Step>
+      <Step title="surface design" content="Adding appropriate background descriptions to algorithms" status="process"></Step>
+      <Step title="input/output format" content="In general, I/O should be kept simple." status="process"></Step>
+      <Step title="Creating test data" content="Get as much data as you can, and it's recommended that you write your own code." status="process"></Step>
+      <Step title="Test Topic" content="Be sure to write your own code to test if you can get through!!!If necessary, ask someone else to test the subject." icon="ios-star" status="process"></Step>
     </Steps>
     <br>
     <oj-problem-edit
