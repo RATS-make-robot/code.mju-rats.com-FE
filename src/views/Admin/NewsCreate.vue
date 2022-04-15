@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>新增消息</h1>
+    <h1>새로운 소식</h1>
     <oj-news-edit></oj-news-edit>
     <Button type="primary" size="large" @click="submit">Submit</Button>
   </div>

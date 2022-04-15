@@ -18,7 +18,7 @@ export default {
   methods: {
     submit () {
       this.$store.dispatch('contest/update', this.contest).then(({ data }) => {
-        this.$Message.success('提交成功！')
+        this.$Message.success('수정 완료 !')
         this.$router.push({name: 'contestOverview', params: only(data, 'cid')})
       })
     }

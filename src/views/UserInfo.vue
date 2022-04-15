@@ -136,25 +136,25 @@ export default {
         ))
         user.mail = this.user.mail || ''
         this.$store.dispatch('user/update', user).then(() => {
-          this.$Message.success('修改成功！')
+          this.$Message.success('수정 성공！')
           this.display = 'overview'
         })
       } else {
-        this.$Message.info('两次密码不一致，请重新输入！')
+        this.$Message.info('비밀번호가 서로 일치하지 않습니다 !')
       }
     },
     del (uid) {
       this.$Modal.confirm({
-        title: '提示',
-        content: `<p>此操作将永久删除用户 ${uid}, 是否继续?</p>`,
+        title: '알림',
+        content: `<p>사용자 ${uid}, 삭제하겠습니까?</p>`,
         onOk: () => {
           this.$store.dispatch('user/delete', { uid }).then(() => {
             this.$router.push({ name: 'home' })
-            this.$Message.success(`成功删除 ${uid}！`)
+            this.$Message.success(`삭제 완료, ${uid}！`)
           })
         },
         onCancel: () => {
-          this.$Message.info('已取消删除！')
+          this.$Message.info('삭제 취소！')
         }
       })
     }

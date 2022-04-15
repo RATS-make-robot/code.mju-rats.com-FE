@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>修改用户信息</h1>
+    <h1>사용자 정보 수정</h1>
     <Row type="flex" justify="start">
       <Col :span="2" class="label">Username</Col>
       <Col :span="4">
@@ -72,10 +72,10 @@ export default {
           { newPwd: this.newPwd }
         ))
         this.$store.dispatch('user/update', user).then(() => {
-          this.$Message.success('修改成功！')
+          this.$Message.success('업데이트 완료 !')
         })
       } else {
-        this.$Message.info('两次密码不一致，请重新输入！')
+        this.$Message.info('비밀번호가 서로 일치하지 않습니다 ！')
       }
     }
   }
