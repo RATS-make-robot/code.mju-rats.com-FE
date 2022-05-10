@@ -163,12 +163,12 @@ export default [
     component: Solution,
     meta: { title: 'Solution Info' }
   },
-  {
-    path: '/ranklist',
-    name: 'ranklist',
-    component: Ranklist,
-    meta: { title: 'Ranklist' }
-  },
+  // {
+  //   path: '/ranklist',
+  //   name: 'ranklist',
+  //   component: Ranklist,
+  //   meta: { title: 'Ranklist' }
+  // },
   {
     path: '/user/:uid',
     name: 'userInfo',
@@ -212,61 +212,61 @@ export default [
       }
     ]
   },
-  {
-    path: '/contest',
-    name: 'contestList',
-    component: ContestList,
-    meta: { title: 'Contest List' }
-  },
-  {
-    path: '/contest/create',
-    name: 'contestCreate',
-    component: ContestCreate,
-    meta: { title: 'Admin', requiresAdmin: true }
-  },
-  {
-    path: '/contests/:cid',
-    component: Contest,
-    meta: { requiresLogin: true },
-    children: [
-      {
-        path: '',
-        name: 'contestOverview',
-        component: ContestOverview,
-        meta: { title: 'Contest Info', requiresLogin: true }
-      },
-      {
-        path: 'problem/:id',
-        name: 'contestProblem',
-        component: ContestProblem,
-        meta: { title: 'Contest Info', requiresLogin: true }
-      },
-      {
-        path: 'problem/:id/submit',
-        name: 'contestSubmit',
-        component: ContestSubmit,
-        meta: { title: 'Contest Info', requiresLogin: true }
-      },
-      {
-        path: 'status',
-        name: 'contestStatus',
-        component: ContestStatus,
-        meta: { title: 'Contest Info', requiresLogin: true }
-      },
-      {
-        path: 'ranklist',
-        name: 'contestRanklist',
-        component: ContestRanklist,
-        meta: { title: 'Contest Info', requiresLogin: true }
-      },
-      {
-        path: 'edit',
-        name: 'contestEdit',
-        meta: { title: 'Admin', requiresAdmin: true },
-        component: ContestEdit
-      }
-    ]
-  },
+  // {
+  //   path: '/contest',
+  //   name: 'contestList',
+  //   component: ContestList,
+  //   meta: { title: 'Contest List' }
+  // },
+  // {
+  //   path: '/contest/create',
+  //   name: 'contestCreate',
+  //   component: ContestCreate,
+  //   meta: { title: 'Admin', requiresAdmin: true }
+  // },
+  // {
+  //   path: '/contests/:cid',
+  //   component: Contest,
+  //   meta: { requiresLogin: true },
+  //   children: [
+  //     {
+  //       path: '',
+  //       name: 'contestOverview',
+  //       component: ContestOverview,
+  //       meta: { title: 'Contest Info', requiresLogin: true }
+  //     },
+  //     {
+  //       path: 'problem/:id',
+  //       name: 'contestProblem',
+  //       component: ContestProblem,
+  //       meta: { title: 'Contest Info', requiresLogin: true }
+  //     },
+  //     {
+  //       path: 'problem/:id/submit',
+  //       name: 'contestSubmit',
+  //       component: ContestSubmit,
+  //       meta: { title: 'Contest Info', requiresLogin: true }
+  //     },
+  //     {
+  //       path: 'status',
+  //       name: 'contestStatus',
+  //       component: ContestStatus,
+  //       meta: { title: 'Contest Info', requiresLogin: true }
+  //     },
+  //     {
+  //       path: 'ranklist',
+  //       name: 'contestRanklist',
+  //       component: ContestRanklist,
+  //       meta: { title: 'Contest Info', requiresLogin: true }
+  //     },
+  //     {
+  //       path: 'edit',
+  //       name: 'contestEdit',
+  //       meta: { title: 'Admin', requiresAdmin: true },
+  //       component: ContestEdit
+  //     }
+  //   ]
+  // },
   {
     path: '/faq',
     name: 'faq',

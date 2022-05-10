@@ -13,7 +13,7 @@
             <MenuItem name="discuss">
               <Icon type="chatbubble-working"></Icon>Discuss
             </MenuItem>
-            <MenuItem name="status">
+            <!-- <MenuItem name="status">
               <Icon type="refresh"></Icon>Status
             </MenuItem>
             <MenuItem name="ranklist">
@@ -21,7 +21,7 @@
             </MenuItem>
             <MenuItem name="contestList">
               <Icon type="android-bar"></Icon>Contest
-            </MenuItem>
+            </MenuItem> -->
             <MenuItem name="faq">
               <Icon type="help-circled"></Icon>FAQ
             </MenuItem>
